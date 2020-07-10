@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script/funFilter.js"></script>
+    <script src="script/greenScreen.js"></script>
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fun Filter</h1>
+
+    <canvas id="imgcanv">
+    </canvas>
+
+    <div>
+        Load image:
+        <input type="file", multiple="false", accept="image/*", id="fileinput", onchange="loadImage()">
+    </div>
+    <div>
+        Choose filter:
+        <input type="button", value="Grayscale", onclick="doGray()">
+        <input type="button", value="Blue", onclick="doBlue()">
+        <input type="button", value="Red", onclick="doRed()">
+        <input type="button", value="My Filter", onclick="doFilter()">
+    </div>
+    <div>
+        <input type="button", value="Reset image", onclick="reset()">
+    </div>
+
+    <h1>Green Screen</h1>
+
+    <canvas id="fore">
+    </canvas>
+    <canvas id="back">
+    </canvas>
+
+    <div>
+        Foreground:
+        <input type="file", multiple="false", accept="image/*", id="foreInput", onchange="loadForeImg()">
+    </div>
+    <div>
+        Background:
+        <input type="file", multiple="false", accept="image/*", id="backInput", onchange="loadBackImg()">
+    </div>
+    <div>
+        <input type="button", value="Create composite", onclick="doGreenScreen()">
+        <input type="button", value="Clear canvases", onclick="clearCanvases()">
+    </div>
+
+</body>
+</html>
