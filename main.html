@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script/funFilter.js"></script>
     <script src="script/greenScreen.js"></script>
+    <script src="script/steganography.js"></script>
     <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
     <title>Document</title>
 </head>
@@ -49,6 +50,26 @@
         <input type="button", value="Create composite", onclick="doGreenScreen()">
         <input type="button", value="Clear canvases", onclick="clearCanvases()">
     </div>
+
+    <h1>Steganography</h1>
+
+        <canvas id="hideCanv">
+        </canvas>
+        <canvas id="inThisCanv">
+        </canvas>
+  
+        <div>
+            Hide This:
+            <input type="file", multiple="false", accept="image/*", id="hide", onchange="loadImgToHide()">
+        </div>
+        <div>
+            In This:
+            <input type="file", multiple="false", accept="image/*", id="inThis", onchange="loadImgToHideIn()">
+        </div>
+
+        <div>
+            <input type="button", value="Hide image", onclick="hide()">
+        </div>
 
 </body>
 </html>
